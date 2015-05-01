@@ -1,8 +1,8 @@
 #!/bin/sh
 
-$ETCD_URL=${ETCD_URL:-"https://github.com/coreos/etcd/releases/download/v2.1.0-alpha.0/etcd-v2.1.0-alpha.0-linux-amd64.tar.gz"}
-$CONFD_URL=${CONFD_URL:-"https://github.com/kelseyhightower/confd/releases/download/v0.9.0/confd-0.9.0-linux-amd64"}
-$ENVCONSUL_URL=${ENVCONSUL_URL:-"https://github.com/hashicorp/envconsul/releases/download/v0.5.0/envconsul_0.5.0_linux_amd64.tar.gz"}
+ETCD_URL=${ETCD_URL:-"https://github.com/coreos/etcd/releases/download/v2.1.0-alpha.0/etcd-v2.1.0-alpha.0-linux-amd64.tar.gz"}
+CONFD_URL=${CONFD_URL:-"https://github.com/kelseyhightower/confd/releases/download/v0.9.0/confd-0.9.0-linux-amd64"}
+ENVCONSUL_URL=${ENVCONSUL_URL:-"https://github.com/hashicorp/envconsul/releases/download/v0.5.0/envconsul_0.5.0_linux_amd64.tar.gz"}
 
 curl -L -q "$ETCD_URL" | tar xz  --strip-components=1 -C / 
 curl -L -q "$ENVCONSUL_URL" | tar xz  --strip-components=1 -C / 
