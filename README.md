@@ -6,10 +6,14 @@ Instead of managing core tools across all of your images and having to either ba
 or build support for those tools to install at run time. This container will manage the tools in one place
 allowing you to essentially mount this into each running container.
 
+# Example
+docker run --name handytools jshanks/handy_tools
+docker run -ti --volumes-from=handytools ununtu /bin/sh
+
 # Location
-All tools are under / i.e.
- /etcdctl
- /envconsul
- /confd
+All tools are under /tools i.e.
+ /tools/etcdctl
+ /tools/envconsul
+ /tools/confd
 
 
